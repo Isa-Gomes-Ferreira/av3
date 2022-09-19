@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Shopping";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lojas cadastradas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">piso</th>
+                <th scope="col">nome</th>
+                <th scope="col">descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var loja in ViewBag.lojas) 
+            {
+                <tr>
+                    <td>piso @loja.Piso</td>
+                    <td>@loja.Nome</td>
+                    <td>@loja.Descricao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
